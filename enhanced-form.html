@@ -8,7 +8,7 @@
     <meta name="author" content="allan">
     <title>enhanced html5</title>
 </head>
-<body style="color:white">
+<body >
     <body>
     <!-- definition lists -->
     <h1>defination lists</h1>
@@ -39,22 +39,28 @@
     </ol>
 
     <h1>multimedia</h1>
+
+    <!-- image -->
     <h2>image</h2>
     <img src="https://images.pexels.com/photos/33348547/pexels-photo-33348547.jpeg" alt="home" width="500" length="350">
 
+    <!-- audio -->
     <h2>audio</h2>
     <audio controls>
         <source src="Toxic-Lyrikali-Backbencher.mp3" type="audio/mp3">
         your browser does not support audio
     </audio>
+
+    <!-- video -->
     <h2>videos</h2>
     <video width="500" length="500"  controls>
         <source src="https://videos.pexels.com/video-files/4075069/4075069-uhd_2560_1440_25fps.mp4" type="video/mp4">
         your browser does not support videos
     </video>
 
+    <!-- table -->
     <h2>table</h2>
-    <table border="1px">
+    <table border="1">
         <thead>
             <tr>
                 <th>days</th>
@@ -85,16 +91,39 @@
             </tr>
         </tbody>
     </table>
-    <form action="index.php" method="POST">
-        <label for="username">username</label>
-        <input type="text" name="username" id="username" placeholder="enter your username">
-        <label for="password">password</label>
-        <input type="password" name="password" id="password" placeholder="enter your password">
+
+    <!-- form -->
+    <form action="index.php" method="POST" autocomplete="off">
+        <label for="username">username</label><br/>
+        <input type="text" name="username" id="username" placeholder="enter your username" required><br/><br/>
+        <label for="password">password</label><br/>
+        <input type="password" name="password" id="password" placeholder="enter your password" required><br/><br/>
+        <label for="gender">gender:</label>
+        <input type="radio" name="gender" id="gender" value="male" required>male
+        <input type="radio" name="gender" id="gender" value="female" required>female
+        <input type="radio" name="gender" id="gender" value="other" required>other
+        <br/><br/>
+
+        <!-- dropdownmenu -->
+        <label for="country">--select country--</label>
+        <select name="country" id="country">
+            <option>kenya</option>
+            <option>uganda </option>
+            <option>Tanzania</option>
+        </select>
+        <br/><br/>
+
+        <!-- checkbox -->
+        <label>
+            <input type="checkbox" name="terms" required> I agree to the Terms and Conditions
+        </label><br/><br/>
         <input type="submit" value="submit">
-        <label for="gender">gender</label>
-        <input type="radio" name="gender" id="gender" value="male">male
-        <input type="radio" name="gender" id="gender" value="female">female
     </form>
+
+    <!-- footer -->
+    <footer>
+        <p>&copy;2025 Allan.All rights reserved</p>
+    </footer>
 
     
 </body>
